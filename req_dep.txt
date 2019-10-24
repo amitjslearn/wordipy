@@ -1,0 +1,21 @@
+##Dependencies/requirements
+the following needs to be installed if you dont have it.
+--------------------------------
+Python 3.7 >=
+--------------------------------
+pip install --user -U nltk
+	or
+conda install -c anaconda nltk 
+--------------------------------
+pip install word2number 
+	or
+conda install -c conda-forge word2number 
+--------------------------------
+[
+Description
+
+This is a Python module to convert number words (eg. twenty one) to numeric digits (21). It works for positive numbers upto the range of 999,999,999,999 (i.e. billions)
+]
+
+
+

@@ -1,0 +1,5 @@
+https://python-packaging.readthedocs.io/en/latest/minimal.html
+
+http://scipy-lectures.org/intro/language/reusing_code.html
+
+https://python101.pythonlibrary.org/chapter36_creating_modules_and_packages.html
