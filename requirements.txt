@@ -11,12 +11,7 @@ pip install word2number
 	or
 conda install -c conda-forge word2number 
 --------------------------------
-[
-Description
-
-This is a Python module to convert number words (eg. twenty one) to numeric digits (21). It works for positive numbers upto the range of 999,999,999,999 (i.e. billions)
-]
-
+The below can be used for packaging 
 ----------------------------------
 pip install wheel
 	or

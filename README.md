@@ -1,5 +1,17 @@
-# wordipy
-wordipy is dummy package which can be used to get abbrevations, tupled things, amounts written in letter to numbers. 
+# **wordipy**
+wordipy is dummy  package which can be used to get abbrevations, tupled things, amounts written in letter to numbers. 
+
+## Dependencies
+
+The following needs to be installed if you dont have it.
+- Python 3 (3.7 or higher)
+-  NLTK
+    <br /> `pip install --user -U nltk`
+	 <br />  or <br /> `conda install -c anaconda nltk`
+- word2number
+ <br />`pip install word2number`  <br /> or <br />
+`conda install -c conda-forge word2number`
+--------------------------------
 
 >Clone this repository
 ```
