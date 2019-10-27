@@ -1,23 +1,54 @@
-# words
-work in progress
+# wordipy
+wordipy is dummy package which can be used to get abbrevations, tupled things, amounts written in letter to numbers. 
 
-wordipy is dummy library which can be used ... 
+>Clone this repository
+```
+git clone https://github.com/amitjslearn/wordipy.git
+```
+>Open the terminal, cd into the directory where the file is cloned
 
-Usage
-from wordipy import abbreviationize
-abbreviationize(Triple BAM)
-abbr= abbreviationize("Triple BAM", sep=",")
-all is well
-Limitations:
-1) input to abbreviationize should be a capital like "C M" to get the output as CM
+Open python in terminal (or command prompt)
+. Type `python` if you have anaconda or `python3`
+``` python
+Python 3.7.3 (default, Mar 27 2019, 22:11:17) 
+[GCC 7.3.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+```
+## Usage
+``` python
+>>> from wordipy.main import abbreviationize
+>>> abbreviationize("C M")
+'CM'
+>>> abbreviationize("Triple A")
+'AAA'
+>>> abbreviationize('Double Bam', sep=",")
+'Bam, Bam'
+```
+>for more help type `help(abbreviationize)`
+``` python
+>>> help(abbreviationize)
+```
+----
+``` python
+>>> from wordipy.main import amountize
+>>> amountize("three hundred dollars")
+'$300'
+>>> amountize("two yen")
+'¥2'
+```
+>for more help type `help(amountize)`
+``` python
+>>> help(amountize)
+```
+---
+### further improvements/additional features:
+1) abbreviationize: input to abbreviationize should be a capital like "C M" to get the output as CM 
+for ex c m will not give CM
 
-
-further/improvement proposal
 1) amountize: the amount which is already a number can be retained as it is
 2) Stop words can be removed if needed
 
-         
-'''only most commonly used tuples (like single, double, triple ,quadruple) are used,
-        other tuples can be added [here] as per the needs'''
-''' some of the currencies are added (like dollar, rupees, yen) other currencies can be added if required [here].
-'''
+>**Note**    
+>1) Only most commonly used tuples (like single, double, triple, quadruple) are used, other tuples can be added as per the needs.
+>2) Only some of the currencies are added (like dollar, yen) other currencies can be added if required.

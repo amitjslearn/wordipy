@@ -1,5 +1,4 @@
 currencies = {"dollar": "$",
-              "rupees": u"\u20B9",
               "yen": 	u"\u00A5",
               # =============================================================================
               #              ''' other currencies can be added,

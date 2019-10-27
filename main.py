@@ -6,14 +6,38 @@ Created on Thu Oct 23 22:11:38 2019
 @author: amit
 """
 import re
-from word2number import w2n
-import vocabulary as voc
-from nltk.stem import PorterStemmer, WordNetLemmatizer
+try:
+    from word2number import w2n
+except ImportError:
+    print("Install word2number")
+try:
+    from nltk.stem import PorterStemmer, WordNetLemmatizer
+except ImportError:
+    print("Install nltk")
+try:
+    import wordipy.vocabulary as voc
+    pass
+except ModuleNotFoundError:
+    print("""change the working directory, 
+    go to the parent dir of this dir
+    do the following
+    $ cd ..
+    ------------------
+    If you still want to use this dir uncomment the below line
+    # import vocabulary as voc
+    --------
+    and comment the above line 
+    import wordipy.vocabulary as voc
+    """)
+
+#import vocabulary as voc
 
 #global output
 
 def processing(io):
-    
+    """
+    this function helps in preprocessing
+    """
     input_str = io 
     input_lower = input_str.lower()
 
@@ -32,6 +56,26 @@ def processing(io):
 
 
 def amountize(io):
+    """
+    This function converts amount written in letter to numbers. 
+    
+    Parameters
+    ----------
+    io : str
+        amounts written in letters
+    
+    Returns
+    -------
+    str
+        the amount in numbers with the currency
+    
+    Examples
+    --------   
+    >>> amountize("three hundred dollars")
+    '$300'
+    >>> amountize("five thousand three hundred and sixty one yen")
+    '¥5361'
+    """    
     process_words = processing(io)
     if len(set(process_words) & set(voc.currencies.keys())):
         currency = set(process_words) & set(voc.currencies.keys()) #raise exception /try except
@@ -45,20 +89,29 @@ def amountize(io):
 
 def abbreviationize(input_str, sep=""):
     """
-    Gets and prints the spreadsheet's header columns
-
+    This function does the following two things
+    1) Takes the abbrevation with or without space and returns the abbrevation without spaces
+    2) Takes the tupled item and returns the repeated item tuple times (tuple is not a data type in this context)
+    
     Parameters
     ----------
     input_str : str
-        The file location of the spreadsheet
-    print_cols : bool, optional
-        A flag used to print the columns to the console (default is
-        False)
+    sep : str (symbols like comma (,))
 
     Returns
     -------
     str
-        a list of strings used that are the header columns
+        a string of expected output
+    Examples
+    --------
+    >>> abbreviationize("C M")
+    'CM'
+    >>> abbreviationize("Triple A")
+    'AAA'
+    >>> abbreviationize('Double Bam', sep=",")
+    'Bam, Bam'
+    >>> abbreviationize('Quadruple Baby', sep=",")
+    'Baby, Baby, Baby, Baby' 
     """
     process_words = processing(input_str)
     input_str_list = input_str.split(" ")
@@ -85,6 +138,8 @@ def abbreviationize(input_str, sep=""):
         return final_abbreviationize(input_str, input_str_list)
 
 def final_abbreviationize(output, input_str_list):            
+    """ This is a helper function for abbreviationize"""
+    
     if all([x.isupper() for x in input_str_list]) or all(x.isupper() for x in output.split()): 
         '''
         if all are upper ex: C M -> CM
