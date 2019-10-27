@@ -5,11 +5,12 @@ Created on Thu Oct 23 22:11:38 2019
 
 @author: amit
 """
-#import funcs as fn
 import re
 from word2number import w2n
 import vocabulary as voc
 from nltk.stem import PorterStemmer, WordNetLemmatizer
+
+#global output
 
 def processing(io):
     
@@ -37,12 +38,7 @@ def amountize(io):
         currency_symbol = voc.currencies[currency.pop()]
         amount = " ".join(process_words[:-1])
         amount_num = w2n.word_to_num(amount)
-        #print(amount_num)
-       # print("intersection" , set(process_words) & set(voc.currencies.keys()))
-        #print(process_words, currency)
-        #print(process_words, amount)
-        #currency_symbol = voc.currencies[currency]
-        #print(currency_symbol)
+        
         output_str = currency_symbol + str(amount_num)
         #print(output_str)
         return output_str
@@ -65,36 +61,43 @@ def abbreviationize(input_str, sep=""):
         a list of strings used that are the header columns
     """
     process_words = processing(input_str)
-    #print(process_words)
-    #print("hi", "lemm", lemmatized_words, "stem", stemmed_words)
     input_str_list = input_str.split(" ")
     
-    #print(set(process_words), set(voc.tuple_.keys()))
     intersection = set(process_words) & set(voc.tuple_.keys())
     
-    #print('ran before')
-    print(intersection)
+    #print(intersection)
     if len(intersection):
-        #print(intersection)
-        times = int(voc.tuple_[intersection.pop()])
-        item = input_str_list[1:]
-        output = item*times
-        print(sep.join(output))
-        
+        '''
+        if double, triple (tuples) is present in the input
+        '''
+        times = intersection.pop()
+        times_num = int(voc.tuple_[times])
+        item = input_str.replace(times, '')[len(times):] + sep
+        output = (item*times_num).strip() # lstrip() can also be used, but strip trims spaces from both sides
+        last_char_remove = True if sep != ""  else False
+        if last_char_remove:
+            output = output[:-1]
+        check = final_abbreviationize(output, input_str_list)
+        if check:
+            return check
         return output
-        # if input is abbrevation type
-        #print("intersection" , set(process_words) & set(voc.tuple_.keys()))
-        
-    
-    if all([x.isupper() for x in input_str_list]): 
-        '''if all are upper ex: C M -> CM
+    else:
+        return final_abbreviationize(input_str, input_str_list)
+
+def final_abbreviationize(output, input_str_list):            
+    if all([x.isupper() for x in input_str_list]) or all(x.isupper() for x in output.split()): 
+        '''
+        if all are upper ex: C M -> CM
         '''
         pattern = re.compile(r's+') 
-        a = re.sub(pattern, '', input_str)
-        #print(input_str_list, a)
-        assert(len("".join(input_str_list)) == len(a))
-        #print(a)
-        return a
+        output = re.sub(pattern, '', output)
+        #assert(len("".join(input_str_list)) == len(a))
+        output = output.replace(" ", "")
+    return output
 
-print(abbreviationize("double All is well"))
-print(amountize('two dollars'), sep=",")
+abbr= abbreviationize('Triple BAM', sep= ",")
+print(abbr, "len: ", len(abbr))
+
+# abbr2 = abbreviationize("C M")
+# print(abbr2)
+# print(amountize('two dollars'))
