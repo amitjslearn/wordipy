@@ -17,5 +17,19 @@ Description
 This is a Python module to convert number words (eg. twenty one) to numeric digits (21). It works for positive numbers upto the range of 999,999,999,999 (i.e. billions)
 ]
 
-
-
+----------------------------------
+pip install wheel
+	or
+conda install -c conda-forge wheel 
+--------------------------------------
+pip install twine
+	or
+ conda install -c conda-forge twine 
+--------------------------------------------
+pip install tox
+	or
+conda install -c conda-forge tox 
+-------------------------------------------
+pip install cookiecutter
+	or
+ conda install -c conda-forge cookiecutter 
