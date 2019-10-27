@@ -95,8 +95,8 @@ def final_abbreviationize(output, input_str_list):
         output = output.replace(" ", "")
     return output
 
-abbr= abbreviationize('Triple BAM', sep= ",")
-print(abbr, "len: ", len(abbr))
+# abbr= abbreviationize('Triple BAM', sep= ",")
+# print(abbr, "len: ", len(abbr))
 
 # abbr2 = abbreviationize("C M")
 # print(abbr2)
