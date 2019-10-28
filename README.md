@@ -58,8 +58,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 1) abbreviationize: input to abbreviationize should be a capital like "C M" to get the output as CM 
 for ex c m will not give CM
 
-1) amountize: the amount which is already a number can be retained as it is
-2) Stop words can be removed if needed
+2) amountize: the amount which is already a number can be retained as it is
+3) Stop words can be removed if needed
+4) **Lemmatization** and **stemming** can be done properly wherever required
 
 >**Note**    
 >1) Only most commonly used tuples (like single, double, triple, quadruple) are used, other tuples can be added as per the needs.
