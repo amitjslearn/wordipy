@@ -7,7 +7,7 @@ Created on Thu Oct 23 22:11:38 2019
 """
 import re
 try:
-    import word2number as w2n
+    from word2number import w2n
 except ImportError:
     print("Install word2number")
 try:
