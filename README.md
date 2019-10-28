@@ -4,7 +4,7 @@ wordipy is dummy  package which can be used to get abbrevations, tupled things, 
 ## Dependencies
 
 The following needs to be installed if you dont have it.
-- Python 3 (3.7 or higher)
+- Python 3 (3.6 or higher)
 -  NLTK
     <br /> `pip3 install --user -U nltk`
 	 <br />  or <br /> `conda install -c anaconda nltk`
