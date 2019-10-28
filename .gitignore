@@ -3,3 +3,5 @@ __pycache__/
 package-mod-ref.txt
 
 .vscode
+
+*.pyc
