@@ -7,10 +7,11 @@ Created on Thu Oct 23 22:11:38 2019
 """
 import re
 try:
-    from word2number import w2n
+    import word2number as w2n
 except ImportError:
     print("Install word2number")
 try:
+    import nltk
     from nltk.stem import PorterStemmer, WordNetLemmatizer
 except ImportError:
     print("Install nltk")
