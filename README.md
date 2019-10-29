@@ -54,7 +54,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> help(amountize)
 ```
 ---
-### Further improvements/additional features:
+### Future Work
 1) abbreviationize: input to abbreviationize should be a capital like "C M" to get the output as CM 
 for ex c m will not give CM
 
