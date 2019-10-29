@@ -1,5 +1,5 @@
 # **wordipy**
-wordipy is dummy  package which can be used to get abbrevations, tupled things, amounts written in letter to numbers. 
+wordipy is dummy  package which can be used in NLP related applications for example to get abbrevations, tupled things, amounts written in letter to numbers. 
 
 ## Dependencies
 
