@@ -7,9 +7,11 @@ The following needs to be installed if you dont have it.
 - Python 3 (3.7 or higher)
 -  NLTK
     <br /> `pip3 install --user -U nltk`
-	 <br />  or <br /> `conda install -c anaconda nltk`
+	 <br /> 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  or <br /> `conda install -c anaconda nltk`
 - word2number
- <br />`pip3 install word2number`  <br /> or <br />
+ <br />`pip3 install word2number`  <br /> 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   or <br />
 `conda install -c conda-forge word2number`
 --------------------------------
 
