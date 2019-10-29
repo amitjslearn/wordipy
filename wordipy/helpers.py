@@ -20,8 +20,7 @@ def processing(io):
     #nltk.download('wordnet')
 
     lemmatizer = WordNetLemmatizer()
-    lemmatized_words = [lemmatizer.lemmatize(
-        word=word, pos='n') for word in words]
+    lemmatized_words = [lemmatizer.lemmatize(word=word, pos='n') for word in words]
 
     process_words = lemmatized_words
     return process_words

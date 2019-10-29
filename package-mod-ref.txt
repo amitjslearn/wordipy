@@ -1,3 +1,8 @@
+good:
+https://packaging.python.org/tutorials/packaging-projects/
+
+https://docs.python.org/3/tutorial/modules.html#packages
+
 recent:
 https://github.com/navdeep-G/setup.py
 
@@ -16,10 +21,3 @@ old:
 
 https://docs.python.org/3/distutils/setupscript.html
 
-https://stackoverflow.com/questions/4740473/setup-py-examples
-
-https://python-packaging.readthedocs.io/en/latest/minimal.html
-
-http://scipy-lectures.org/intro/language/reusing_code.html
-
-https://python101.pythonlibrary.org/chapter36_creating_modules_and_packages.html
