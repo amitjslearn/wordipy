@@ -12,7 +12,7 @@ except ImportError:
     print("Install word2number")
 try:
     import nltk
-    from nltk.stem import PorterStemmer, WordNetLemmatizer
+    from nltk.stem import WordNetLemmatizer #,PorterStemmer
 except ImportError:
     print("Install nltk")
 try:
