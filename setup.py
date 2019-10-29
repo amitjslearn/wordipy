@@ -1,4 +1,4 @@
-
+# FEW THINGS ARE IMPORTED BUT WILL BE USED LATER
 import io
 import os
 import sys
@@ -10,7 +10,7 @@ setup(name='wordipy',
       description='wordipy is dummy  package which can be used in preprocessing for NLP',
       py_modules=['wordipy'],
       install_requires=[
-         'word2number', 'nltk', 
-      ],      
+          'word2number', 'nltk',
+      ],
       #package_dir = {'': 'lib'}
       )
