@@ -1,3 +1,7 @@
+https://docs.python.org/3/distutils/setupscript.html
+
+https://stackoverflow.com/questions/4740473/setup-py-examples
+
 https://python-packaging.readthedocs.io/en/latest/minimal.html
 
 http://scipy-lectures.org/intro/language/reusing_code.html
