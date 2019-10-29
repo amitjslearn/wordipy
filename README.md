@@ -22,13 +22,7 @@ git clone https://github.com/amitjslearn/wordipy.git
 >Open the terminal, cd into the directory where the file is cloned
 
 Open python in terminal (or command prompt)
-. Type `python` if you have anaconda or `python3`
-``` python
-Python 3.7.3 (default, Mar 27 2019, 22:11:17) 
-[GCC 7.3.0] :: Anaconda, Inc. on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> 
-```
+
 ## Usage
 ``` python
 >>> from wordipy.main import abbreviationize
