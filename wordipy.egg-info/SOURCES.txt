@@ -1,0 +1,11 @@
+README.md
+setup.py
+wordipy/__init__.py
+wordipy/helpers.py
+wordipy/main.py
+wordipy/vocabulary.py
+wordipy.egg-info/PKG-INFO
+wordipy.egg-info/SOURCES.txt
+wordipy.egg-info/dependency_links.txt
+wordipy.egg-info/requires.txt
+wordipy.egg-info/top_level.txt
