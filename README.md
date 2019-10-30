@@ -67,4 +67,3 @@ for ex "c m" will not give "CM". We can take care of it.
 >2) Only some of the currencies are added (like dollar, yen) other currencies can be added if required.
 >3) The amount/numbers given should be positive numbers upto the range of 999,999,999,999 (i.e. billions).
 
-[Trying setup.py to work on alpha-branch]
