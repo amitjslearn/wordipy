@@ -19,13 +19,15 @@ The following needs to be installed if you dont have it.
 ```
 git clone https://github.com/amitjslearn/wordipy.git
 ```
->Open the terminal, cd into the directory where the file is cloned
+>Open the terminal, cd into this repo directory
 
-Open python in terminal (or command prompt)
-
+Open python in terminal ~~~(or command prompt)~~~ (not sure for windows)
+``` python
+python3 setup.py install
+```
 ## Usage
 ``` python
->>> from wordipy.main import abbreviationize
+>>> from wordipy import abbreviationize
 >>> abbreviationize("C M")
 'CM'
 >>> abbreviationize("Triple A")
@@ -39,7 +41,7 @@ Open python in terminal (or command prompt)
 ```
 ----
 ``` python
->>> from wordipy.main import amountize
+>>> from wordipy import amountize
 >>> amountize("three hundred dollars")
 '$300'
 >>> amountize("two yen")
