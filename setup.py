@@ -15,6 +15,8 @@ setup(name='wordipy',
       install_requires=[
           'word2number', 'nltk',
       ],
-	packages = find_packages(),
+	packages = find_packages(where='.'),
       #package_dir = {'': 'lib'}
       )
+
+# python3 setup.py sdist bdist_wheel
