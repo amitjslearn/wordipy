@@ -21,7 +21,8 @@ git clone https://github.com/amitjslearn/wordipy.git
 ```
 >Open the terminal, cd into this repo directory
 
-Open python in terminal ~~~(or command prompt)~~~ (not sure for windows)
+Open python in terminal ~~(or command prompt)~~
+(not sure for windows)
 ``` python
 python3 setup.py install
 ```
