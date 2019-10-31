@@ -19,14 +19,13 @@ The following needs to be installed if you dont have it.
 ```
 git clone https://github.com/amitjslearn/wordipy.git
 ```
->Open the terminal, cd into this repo directory
-
-Open python in terminal ~~(or command prompt)~~
-(not sure for windows)
+>Open the terminal, cd into this repo directory ~~(or command prompt)~~ (not sure for windows)
 ``` python
 python3 setup.py install
 ```
+
 ## Usage
+Open python in terminal 
 ``` python
 >>> from wordipy import abbreviationize
 >>> abbreviationize("C M")
